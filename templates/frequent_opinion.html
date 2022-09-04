@@ -1,0 +1,25 @@
+{% extends "helpers/layout.html" %} {% block body %}
+
+<div class="content">
+    <h3 class="ml-5">Авторское слово</h3>
+    <hr />
+
+    <div class="card-columns" style="width: 95%; margin: 0 auto;
+">
+        {% for Author_info in tasks %}
+        <div class="card h-100">
+            <a href="{{url_for('frequent_opinion', author=Author_info.Name)}} class="btn btn-primary">
+                <img src="static/picture/poem_authors/{{Author_info.Name}}.jpg" class="card-img-top">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{Author_info.Name}}</h5>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <hr />
+</div>
+
+{% endblock %}
+

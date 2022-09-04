@@ -1,0 +1,34 @@
+﻿{% extends "helpers/layout.html" %} {% block body %}
+<meta charset="utf-8">
+<div class="content">
+    <h3 class="ml-5">
+        {{author_name}}
+    </h3>
+    <hr />
+
+    <div class="container-fluid">
+        <div class="card mb-2">
+            <div class="row no-gutters">
+                <div class="col-lg-4">
+                    <img src='static/picture/poem_authors/{{author_name}}.jpg' class="img-fluid">
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{author_name}}</h5>
+                        <pre></pre>
+                        <p class="card-text">
+                            {{author_info|safe}}
+                        </p>
+                        <p class="card-text"><small class="text-muted">Последнее обновление: {{author_date}}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <center>
+            {{author_books|safe}}
+        </center>
+    </div>
+    <hr />
+</div>
+{% endblock %}

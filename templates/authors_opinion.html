@@ -1,0 +1,38 @@
+{% extends "helpers/layout.html" %} {% block body %}
+<div class="content">
+  <h3 class="ml-5">Список членов калининградского пен-центра</h3>
+  <hr />
+  <div class="event_container event_container-main">
+    <div class="testdf">
+	{% for i in Members %}
+      <div class="text-container_1">
+        <img
+          class="event_img"
+          src='/static/picture/authors/{{"".join(i.split())}}.jpg'
+        />
+        <p>
+          {{i}}
+        </p>
+      </div>
+    {% endfor %}
+	</div>
+	<h3 class="ml-5">Почётный список членов калининградского пен-центра</h3>
+	<hr />
+	<div class="testdf">
+	{% for i in Members_honorary %}
+      <div class="text-container_1">
+        <img
+          class="event_img"
+          src='/static/picture/authors/{{"".join(i.split())}}.jpg'
+        />
+        <p>
+          {{i}}
+        </p>
+      </div>
+    {% endfor %}
+	</div>
+  </div>
+  <hr />
+</div>
+{% endblock %}
+ 

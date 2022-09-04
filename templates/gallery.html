@@ -1,0 +1,25 @@
+{% extends "helpers/layout.html" %} {% block body %}
+
+<div class="content">
+  <h3 class="ml-5">Фотографии</h3>
+  <hr />
+  <div class="container">
+    <div style="text-align: center">
+    </div>
+    <div class="row">
+      {% for Photos in tasks %}
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <figure class="sign">
+                <img class="img-fluid d-f"
+                     data-fancybox="gallery"
+                     src="static/picture/gallery/{{Photos.Photo}}"
+                     alt="..." />
+                <figcaption style="text-align: center">{{Photos.Caption}}</figcaption>
+            </figure>
+        </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

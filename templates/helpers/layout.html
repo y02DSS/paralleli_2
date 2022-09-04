@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+
+<!-- HEAD -->
+<title>{{ title }}</title>
+<meta charset="UTF-8" />
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" href="static/style/main.css" />
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
+      crossorigin="anonymous"
+      rel="stylesheet" />
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+        m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(81175630, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/81175630" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<!-- BODY TOP -->
+<div class="container-fluid">
+    <header class="header">
+        <h1 class="title">Сайт Калининградского ПЕН-центра</h1>
+        <ul class="nav nav-pills nav-fill nav_desk">
+            {% if main %}
+            <li class="nav-item">
+                <a class="nav-link active" href="/">ГЛАВНАЯ</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/">ГЛАВНАЯ</a>
+            </li>
+            {% endif %} {% if event %}
+            <li class="nav-item">
+                <a class="nav-link active" href="/event">СОБЫТИЯ</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/event">СОБЫТИЯ</a>
+            </li>
+            {% endif %} {% if our_library %}
+            <li class="nav-item">
+                <a class="nav-link active" href="/our_library">НАША БИБЛИОТЕКА</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/our_library">НАША БИБЛИОТЕКА</a>
+            </li>
+            {% endif %} {% if gallery %}
+            <li class="nav-item">
+                <a class="nav-link active" href="/gallery">ГАЛЕРЕЯ</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/gallery">ГАЛЕРЕЯ</a>
+            </li>
+            {% endif %} {% if projects %}
+            <li class="nav-item">
+                <a class="nav-link active" href="/projects">ПРОЕКТЫ</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/projects">ПРОЕКТЫ</a>
+            </li>
+            {% endif %} {% if authors_opinion %}
+            <li class="nav-item">
+                <a class="nav-link active" href="/authors_opinion">ПЕРСОНАЛИ ПЕН-ЦЕНТРА</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/authors_opinion">ПЕРСОНАЛИ ПЕН-ЦЕНТРА</a>
+            </li>
+            {% endif %} {% if frequent_opinion %}
+            <li class="nav-item">
+                <a class="nav-link active" href="/frequent_opinion">АВТОРСКОЕ СЛОВО</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/frequent_opinion">АВТОРСКОЕ СЛОВО</a>
+            </li>
+            {% endif %} {% if young_voice %}
+            <li class="nav-item">
+                <a class="nav-link active" href="/young_voice">МОЛОДЫЕ ГОЛОСА</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/young_voice">МОЛОДЫЕ ГОЛОСА</a>
+            </li>
+            {% endif %}
+        </ul>
+
+        <div class="headerPhone">
+            <h4 class="titlePhone">Сайт Калининградского ПЕН-центра</h4>
+            <div class="phoneBtn">
+                <span></span>
+            </div>
+        </div>
+
+        <div class="phoneMenu">
+            <ul class="nav nav-pills nav-fill">
+                {% if main %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">ГЛАВНАЯ</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/">ГЛАВНАЯ</a>
+                </li>
+                {% endif %} {% if event %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="/event">СОБЫТИЯ</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/event">СОБЫТИЯ</a>
+                </li>
+                {% endif %} {% if our_library %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="/our_library">НАША БИБЛИОТЕКА</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/our_library">НАША БИБЛИОТЕКА</a>
+                </li>
+                {% endif %} {% if gallery %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="/gallery">ГАЛЕРЕЯ</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery">ГАЛЕРЕЯ</a>
+                </li>
+                {% endif %} {% if projects %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="/projects">ПРОЕКТЫ</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">ПРОЕКТЫ</a>
+                </li>
+                {% endif %} {% if authors_opinion %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="/authors_opinion">ПЕРСОНАЛИ ПЕН-ЦЕНТРА</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/authors_opinion">ПЕРСОНАЛИ ПЕН-ЦЕНТРА</a>
+                </li>
+                {% endif %} {% if frequent_opinion %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="/frequent_opinion">АВТОРСКОЕ СЛОВО</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/frequent_opinion">АВТОРСКОЕ СЛОВО</a>
+                </li>
+                {% endif %} {% if young_voice %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="/young_voice">МОЛОДЫЕ ГОЛОСА</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/young_voice">МОЛОДЫЕ ГОЛОСА</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+</div>
+
+<!-- BODY -->
+{% block body %} {% endblock %}
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="card bg-dark text-white">
+        <div class="card-img-overlay">
+            <h4 class="card-title">Сайт Калининградского ПЕН-центр</h4>
+            <h5 class="p-0 m-0">Обратная связь:</h5>
+            <h6>
+                Почта - <a href="mailto:za02za02@bk.ru?subject=Вопрос по сайту" style="color:white">za02za02@bk.ru</a>
+                <br />
+                Телефон - <br />
+            </h6>
+            <p class="card-text" align="right">
+                2020.© Сайт Калининградского ПЕН-центр
+            </p>
+            <div></div>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="static/js/main.js"></script>

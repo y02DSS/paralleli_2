@@ -1,0 +1,39 @@
+{% extends "helpers/layout.html" %} {% block body %}
+
+<div class="ml-5"> 
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ФИО и почта пользователя</th>
+      <th scope="col">Название произведения</th>
+      <th scope="col">Аннотация + дата + тип</th>
+      <th scope="col">Фотографии</th>
+      <th scope="col">Произведение</th>
+      <th scope="col">Согласие на размещение</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for GG_user in tasks_user %}
+    {% if GG_user.Show == 0: %}
+    <tr>
+      <th scope="row">{{GG_user.ID}}</th>
+      <td>{{GG_user.Name}}<p></p>{{GG_user.Email}}</td>
+      <td>{{GG_user.Name_book}}</td>
+      <td>{{GG_user.Coment}}<p></p>{{GG_user.Date}}<p></p>{{GG_user.Type}} </td>
+      <td><img src="static/picture/picture_user/{{GG_user.Photo}}" class="lib_elem_smallest-img" /></td>
+      <td><a href="{{url_for('book_user', Link_user=GG_user.Link)}}" target="_blank" class="btn btn-primary btn-lg"
+              onclick='change();'>Посмотреть</a></td>
+      <td><a href="{{url_for('book_user_true', Link_user=GG_user.ID)}}" target="_blank" class="btn btn-success btn-lg"
+              onclick='change();'>Разместить</a>
+          <a href="{{url_for('book_user_false', Link_user=GG_user.ID)}}" target="_blank" class="btn btn-danger btn-lg"
+              onclick='change();'>Отказать</a></td>
+    </tr>
+    {% else %}
+    <h3> Все произведения разобраны </h3>
+    {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
